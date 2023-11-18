@@ -1,0 +1,168 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    {% block header %}
+    <meta name="description" content="blog">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="UTF">
+    <meta name="author" content="Imran Abdu">
+    <link rel="icon" href="{% static 'images/smalllogo.png' %}">
+    <link rel="stylesheet" href="{% static 'css/base/base.css' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=yes">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+{% endblock %}
+</head>
+<div class="menu-bar">
+    <div class="logo-container">
+        <a href="{% url 'home' %}"><img src="{% static 'images/logo.png' %}" alt="Logo"></a>
+    </div>
+    <div class="menu-icon">&#9776;</div>
+    <div class="menu-items">
+        <a href="{% url 'home' %}">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Contact</a>
+        <a href="#contact">FAQ</a>
+        <a href="#" class="get-one-button">GET ONE</a>
+    </div>
+    <!-- Second list for smaller screens -->
+    <div class="menu-items-smaller">
+        <a href="#aboutus">Home</a>
+        <a href="#aboutus">About</a>
+        <a href="#projects">Contact</a>
+        <a href="#contact">FAQ</a>
+        <a href="#" class="get-one-button">GET ONE</a>
+    </div>
+</div>
+
+<style>
+    body {
+        padding: 0;
+        margin: 0;
+        font-family: "poppins", sans-serif;
+    }
+
+    .menu-bar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        z-index: 1000;
+        position: sticky;
+        top: 0;
+        background-color: white;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    }
+
+    .logo-container {
+        flex-grow: 1;
+    }
+
+    .menu-bar a img {
+        width: 106px;
+    }
+
+    .menu-icon {
+        display: none;
+        cursor: pointer;
+        font-size: 25px;
+    }
+
+    .menu-items {
+        display: flex;
+    }
+
+    .menu-bar a {
+        text-decoration: none;
+        color: rgba(0, 0, 0, 0.548);
+        padding: 10px;
+    }
+
+    a.get-one-button {
+        background-color: #FF8103;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    .menu-items-smaller {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: -100%;
+        background-color: white;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        height: 100%;
+        width: 65%;
+        transition: right 0.5s ease;
+    }
+
+    @media screen and (max-width: 768px) {
+    .menu-items {
+        display: none;
+    }
+
+    .menu-items-smaller {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: -100%;
+        background-color: white;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        height: 100%;
+        width: 65%;
+        transition: right 0.5s ease;
+    }
+
+    #check:checked ~ .menu-items-smaller {
+        right: 0;
+    }
+
+    .menu-bar a {
+        text-align: center;
+        padding: 15px;
+        width: 100%;
+    }
+
+    .menu-icon {
+        display: block;
+        margin-right: 20px;
+    }
+}
+
+</style>
+
+<script>
+    document.querySelector('.menu-icon').addEventListener('click', function () {
+        const menuItemsSmaller = document.querySelector('.menu-items-smaller');
+        menuItemsSmaller.style.right = (menuItemsSmaller.style.right === '0%' || menuItemsSmaller.style.right === '') ? '-100%' : '0%';
+    });
+</script>
+
+
+
+
+{% block content %}
+
+{% endblock %}
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</body>
+
+
+
+
+
+
+</html>

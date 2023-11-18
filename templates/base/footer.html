@@ -1,0 +1,78 @@
+{% load static %}
+<div class="container-8">
+    <footer class="footer">
+        <div class="footer-content">
+            
+            <div class="footer-section">
+                <img src="{% static 'images/smalllogo-transparent.png' %}" alt="Your Logo" class="footer-logo">
+            </div>
+            <div class="footer-section">
+                <h3>Services</h3>
+                <ul>
+                    <li>E-commerce</li>
+                    <li>WordPress Development</li>
+                    <li>Landing and Promo Sites</li>
+                    <li>Website for Startups</li>
+                    <li>Corporate Websites</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <a href="#" class="footer-link">About</a>
+                <a href="#" class="footer-link">FAQ</a>
+                <a href="#" class="footer-link">Contact</a>
+            </div>
+           
+        </div>
+    </footer>
+</div>
+
+<style>
+    .container-8 {
+        text-align: center;
+    }
+
+    .footer {
+        background: linear-gradient(to bottom right, #5a18a5, #340c68);
+        color: white;
+        padding: 20px;
+    }
+
+    .footer-content {
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .footer-section {
+        margin: 10px;
+        text-align: left;
+        margin-bottom: 50px;
+    }
+
+    .footer-link {
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .footer-section h3 {
+        padding-bottom: 5px;
+    }
+
+    .footer-section ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .footer-section ul li {
+        margin-bottom: 5px;
+    }
+
+    .footer-logo {
+        max-width: 20%;
+        height: auto;
+        filter:contrast(0%);
+    }
+</style>

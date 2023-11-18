@@ -1,0 +1,97 @@
+
+<div class="container-7">
+    <div>
+        <h1>START WORKING WITH US</h1>
+    </div>
+    <div class="form-for-contact">
+        <form id="form-for-success">
+            <input type="text" placeholder="Full Name" required>
+            <input type="tel" placeholder="Number With Country Code" required>
+            <select name="budget" id="budget" required>
+                <option value="" disabled selected>Your Budget</option>
+                <option value="100">Less than 100</option>
+                <option value="100-500">100-500</option>
+                <option value="500-1000">500-1000</option>
+                <option value="1000-1500">1000-1500</option>
+                <option value="1500-2000">1500-2000</option>
+                <option value="2000-3000">2000-3000</option>
+                <option value="3000-4000">3000-4000</option>
+                <option value="4000-5000">4000-5000</option>
+                <option value="5000-6000">5000-10,000</option>
+                <option value=">10000">More than 10,000</option>
+            </select>
+            <input type="email" placeholder="Email" required>
+            <textarea placeholder="Your Project Description" rows="4" required></textarea>
+        
+            
+            <button type="submit">Submit</button>
+            <p>Start a conversation by filling in the form</p>
+        </form>
+    </div>
+</div>
+
+
+<style>
+       .container-7 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        max-width: 400px;
+        margin: 0 auto; /* Center the container horizontally */
+    }
+
+    .form-for-contact {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom:130px;
+    }
+
+    .form-for-contact form {
+        border: 1px solid orangered;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 100%; /* Ensure the form takes the full width of its container */
+        
+    }
+    input,
+    select,
+    textarea {
+        width: 100%;
+        padding: 20px;
+        margin-bottom: 10px;
+    box-sizing: border-box;
+    border:1px solid grey;
+        outline: none; /* Remove default focus outline */
+        border-radius: 4px;font-family: "poppins",sans-serif;
+    }
+
+    input:focus,
+    textarea:focus {
+        border: 1px solid orangered; /* Change border color to orangered on focus */
+    }
+
+    .form-for-contact button {
+        background-color: orangered;
+        color: white;
+        padding:15px;
+        border: none;
+        width:25%;
+        border-radius: 5px;
+        cursor: pointer;
+        font-family: "poppins",sans-serif;
+    }
+
+    textarea {
+        resize: none;
+    }
+
+    @media(max-width:400px){
+        .form-for-contact form {
+        border: 1px solid transparent;  
+    }
+    }
+</style>

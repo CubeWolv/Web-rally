@@ -1,0 +1,254 @@
+{% extends 'base/base.html' %}{% load static %}
+{% block header %}
+<meta name="description" content="blog">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta charset="UTF">
+<meta name="author" content="Imran Abdu">
+<link rel="icon" href="{% static 'images/smalllogo.png' %}">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=yes">
+<link rel="stylesheet" href='{% static "css/homepage/homepage.css" %}' />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Krona+One&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+<title>Web Rally</title>
+
+{% endblock header %}
+
+{% block content %}
+<div class="container-1">
+    <div class="big-heading">
+        <h1>We make <span id="changeableText">digital</span> websites for you</h1>
+        <p>Revolutionize your online presence with cutting-edge web solutions .</p>
+        <button class="button-orange-webrally">GET ONE</button>
+    </div>
+    <div class="homepage-first-image">
+        <img src="{% static 'images/man-on-laptop.png' %}">
+    </div>
+</div>
+
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const changeableText = document.getElementById('changeableText');
+        const words = ['scalable', 'secure', 'modern', 'digital'];
+        let index = 0;
+
+        function changeText() {
+            changeableText.style.opacity = 0; // Set opacity to 0 initially
+            setTimeout(function () {
+                changeableText.textContent = words[index];
+                changeableText.style.opacity = 1; // Fade in by setting opacity to 1
+            }, 500); // Adjust the duration as needed
+            index = (index + 1) % words.length;
+        }
+
+        setInterval(changeText, 4000);
+    });
+
+</script>
+
+
+<div class="container-2">
+    <div class="partner-images">
+        <img src="{% static 'images/partners/google.png' %}">
+        <img src="{% static 'images/partners/best-places.png' %}">
+        <img src="{% static 'images/partners/meta.png' %}">
+        <img src="{% static 'images/partners/salesforce.png' %}">
+        <img src="{% static 'images/partners/upwork.png' %}">
+    </div>
+</div>
+
+
+
+<div class="container-3">
+    <div class="devlopment-services">
+        <h1>Website Development Services</h1>
+    </div>
+    <div class="boxes-for-services">
+     <a href="{% url 'wordpress' %}">
+         <div class="service-box1">
+           <div class="boxes-inside-boxes-services">
+                <img src="{% static 'images/services/wordpress.svg' %}">
+                <p>WordPress development</p>
+                <p>WordPress websites developed to archieve business results</p>
+            </div>
+        </div>
+    </a>
+    <a href="{% url 'eccomerce' %}">
+        <div class="service-box2">
+            <div class="boxes-inside-boxes-services"><img src="{% static 'images/services/E-commerce.svg' %}">
+                <p>E-commerce website</p>
+                <p>Find out how we can help you sell your products like no other</p>
+            </div>
+        </div>
+        </a>
+ 
+        <a href="{% url 'landingpage' %}">
+        <div class="service-box3">
+            <div class="boxes-inside-boxes-services"><img src="{% static 'images/services/landing-and-promo.svg' %}">
+                <p>Landing and Promo Sites</p>
+                <p>Here you will get a sales magnet with the latest web technologies</p>
+            </div>
+        </div></a>
+
+        <a href="{% url 'startup' %}">
+        <div class="service-box4">
+            <div class="boxes-inside-boxes-services"><img src="{% static 'images/services/website-for-startups.svg' %}">
+                <p>Website for Startups</p>
+                <p>Here you can get cost-effective solutions to grow your startup</p>
+            </div>
+        </div></a>
+
+
+        <a href="{% url 'corporate' %}">
+        <div class="service-box5">
+            <div class="boxes-inside-boxes-services"><img src="{% static 'images/services/corporate-website.svg' %}">
+                <p>Corporate website</p>
+                <p>Find out how to create a hight quality corporate website</p>
+            </div>
+        </div></a>
+    </div>
+</div>
+
+
+
+<div class="container-4">
+    <div class="success-story-become">
+        <img src="{% static 'images/others/6.png' %}">
+        <div class="success-story-text">
+            <h1>Become Our Next Success Story?</h1>
+            <p>Connect with our team experts to design web apps that offer a rich user experience. Lay down your requirements and join our list of success stories.</p>
+            <button class="button-orange-webrally">Talk to us</button>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div class="container-5">
+    <div class="about-us-bridge">
+        <h1>ABOUT WebRally</h1>
+        <div class="about-webrally-text">
+            <p>
+                WebRally, established in 2023, is dedicated to assisting companies in realizing their business objectives online effectively. Our collaborative team of web designers, UI/UX specialists, web developers, and digital marketers strives to craft exquisite, well-structured, and distinctive solutions.</p>
+                <br>
+               <p> Our experts go beyond conventional methods to elevate your business. This innovative approach in web design and development enables us to tailor solutions that perfectly align with your business needs. In essence, we create something that instills pride!
+            </p>
+        </div>
+    </div>
+    <script src="https://cdn.lordicon.com/lordicon-1.2.0.js"></script>
+    <lord-icon class="lord-icon-code1"
+        src="https://cdn.lordicon.com/anbdxkon.json"
+        trigger="loop"
+        stroke="light"
+        colors="primary:#eeaa66,secondary:#320a5c"
+        style="width:250px;height:250px">
+        
+    </lord-icon>
+</div>
+
+
+<div class="container-6">
+    <div class="two-column-uses" id="the-first-column">
+    <div class="one-two-column-uses">
+        <div  class="uses-box">
+            <div class="straigt-box-uses"> <img src="{% static 'images/uses/why-icon-3.png' %}"></div>
+        <div class="the-div-for-uses-text"><p class="uses-heading">ACCELERATE YOUR REVENUE!</p>
+        <p>200+ years of cumulative team experience. No matter the industry, business goals, or location to turn your requirements into the profitable solution.
+        </p>
+        </div>
+    </div>
+        
+    
+    
+    <div  class="uses-box">
+        <div class="straigt-box-uses"><img src="{% static 'images/uses/protect-your-business.png' %}"></div>
+    <div class="the-div-for-uses-text"><p class="uses-heading">PROTECT YOUR BUSINESS!</p>
+    <p>
+        Every website or app is secure and built on the latest versions of open source content
+    </p>
+    </div>
+    </div>
+    
+    
+    <div  class="uses-box">
+        <div class="straigt-box-uses"><img src="{% static 'images/uses/why-icon-2.png' %}"></div>
+    <div class="the-div-for-uses-text"><p class="uses-heading">
+        GET YOUR LEADS GENERATION STRATEGY!
+        </p>
+    <p>Combining marketing and technology, we provide a full range of services from the UI/UX design and web development to SEO and promotion.
+    </p>
+    </div>
+    </div>
+    
+    </div>
+
+
+
+    <div class="one-two-column-uses" id="the-second-column">
+        
+    <div  class="uses-box">
+        <div class="straigt-box-uses"><img src="{% static 'images/uses/why-icon-4.png' %}"></div>
+    <div class="the-div-for-uses-text"><p class="uses-heading">EXCEED YOUR EXPECTATIONS!</p>
+    <p>
+        Not limited to standard methods. We use the horizontal a corporate culture that naturally encourages employees to be masters of innovations.
+    </p>
+    </div>
+    </div>
+    
+    
+    
+    <div  class="uses-box">
+        <div class="straigt-box-uses"><img src="{% static 'images/uses/why-icon-1.png' %}"></div>
+    <div class="the-div-for-uses-text"><p class="uses-heading">IMPROVE YOUR METHODS!
+    </p>
+    <p>Receive a skilled guide to shape a plan, refine budget and timeline, structure development, and initiate the task
+    </p>
+    </div>
+    </div>
+    
+    
+    
+    <div  class="uses-box">
+        <div class="straigt-box-uses"><img src="{% static 'images/uses/respect-you.png' %}"></div>
+    <div class="the-div-for-uses-text"><p class="uses-heading">
+        RESPECT OFFERED!</p>
+    <p>It’s great to work with honesty, transparency, trustworthy and law-abiding.
+    </p>
+    </div>
+    </div>
+    
+    
+    
+    </div>
+    </div>
+    </div>
+  
+
+
+  <div class="container-7">
+    <div>
+        <h1>GET IN TOUCH</h1>
+    </div>
+    <div class="form-for-contact">
+        <form>
+            <input type="text" placeholder="Full Name" required>
+            <input type="tel" placeholder="Number With Country Code" required>
+            <input type="email" placeholder="Email" required>
+            <textarea placeholder="Your Project Description" rows="4" required></textarea>
+            <button type="submit">Submit</button>
+            <p>Start a conversation by filling in the form</p>
+        </form>
+    </div>
+</div>
+
+
+
+{% include 'base/footer.html' %}
+
+
+
+{% endblock content %}

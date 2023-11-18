@@ -1,0 +1,116 @@
+{% extends 'base/base.html' %}{% load static %}
+{% block header %}
+<meta name="description" content="blog">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta charset="UTF">
+<meta name="author" content="Imran Abdu">
+<link rel="icon" href="{% static 'images/smalllogo.png' %}">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=yes">
+<link rel="stylesheet" href='{% static "css/services/services.css" %}' />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Krona+One&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+<title>Web Rally</title>
+
+<style>
+    .container-1 {
+    background: linear-gradient(to bottom right, #0077cc, #004080);
+    box-shadow: 0 4px 8px rgba(0, 0, 255, 0.3), 0 15px 12px rgba(0, 0, 255, 0.22);
+}
+
+    .the-heading-of-value-boxes {
+    background: linear-gradient(to bottom right, #0077cc, #004080);
+}
+    .container-3 {
+    background: linear-gradient(to bottom right, #0077cc, #004080);
+}
+</style>
+{% endblock header %}
+
+{% block content %}
+<div class="container-1">
+    <div class="homepage-container">
+        <div class="homepage2-front-text">
+            <div class="homepage2-front-text-holder">
+                <p id="the-first-heading">Wordpress development</p>
+                <p>Web Rally offers comprehensive WordPress development services, covering UI/UX design, website
+                    development, migration, third-party integrations, optimization, scalability, and ongoing
+                    maintenance. Tailored options are available for start-ups, small to midsize businesses, enterprise
+                    companies, and marketing agencies.</p>
+                <button class="button-to-get-in-touch">Get In Touch</button>
+            </div>
+        </div>
+        <div class="the-image-on-the-hompage">
+            <img src="{% static 'images/others/5.png' %}">
+        </div>
+    </div>
+</div>
+
+
+<div class="container-2">
+    <div>
+        <h1 style="color:rgba(0, 0, 0, 0.753)">BENEFITS OF WEB RALLY’S WORK</h1>
+        <p>By collaborating with us, you receive:</p>
+    </div>
+    <div class='value-boxes'>
+        <div class="the-boxes-colored-have">
+            <div class="the-heading-of-value-boxes">
+                <p>FULL ACCESS</p>
+            </div>
+            <p class="child-for-the-heading-of-v-b">We create websites in a way that makes it easy for you to make
+                changes yourself whenever you want.</p>
+        </div>
+        <!-- Add 5 more value boxes here -->
+
+        <div class="the-boxes-colored-have">
+            <div class="the-heading-of-value-boxes">
+                <p>CLEAN AND VALID CODE</p>
+            </div>
+            <p class="child-for-the-heading-of-v-b">We write clean code that can easily be understood and reused by any
+                other developer.</p>
+        </div>
+        <div class="the-boxes-colored-have">
+            <div class="the-heading-of-value-boxes">
+                <p>THOROUGHLY TESTED SITE</p>
+            </div>
+            <p class="child-for-the-heading-of-v-b">Our specialists test sites thoroughly. Also, final testing of the
+                finished site is carried out, which completely eliminates the appearance of bugs.</p>
+        </div>
+        <div class="the-boxes-colored-have">
+            <div class="the-heading-of-value-boxes">
+                <p>RESPONSIVE</p>
+            </div>
+            <p class="child-for-the-heading-of-v-b">Simply put, your website will be accessed from any browser
+                independently of the version and will display well on every screen size.</p>
+        </div>
+        <div class="the-boxes-colored-have">
+            <div class="the-heading-of-value-boxes">
+                <p>SEO FRIENDLY</p>
+            </div>
+            <p class="child-for-the-heading-of-v-b">We understand the importance of your website SEO performance, so we
+                provide all the conditions for this even at the design stage.</p>
+        </div>
+        <div class="the-boxes-colored-have">
+            <div class="the-heading-of-value-boxes">
+                <p>FREE CUSTOMER SUPPORT</p>
+            </div>
+            <p class="child-for-the-heading-of-v-b">Once we have received payment and launched your website, we provide
+                you with free technical support.</p>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="container-3">
+<h1>BLOG |</h1>
+<p>> you should use it because</p>
+<p>> you should use it because</p>
+</div>
+
+
+
+{% include 'base/form.html' %}
+{% include 'base/footer.html' %}
+{% endblock content %}
