@@ -20,7 +20,7 @@
     <div class="big-heading">
         <h1>We make <span id="changeableText">digital</span> websites for you</h1>
         <p>Revolutionize your online presence with cutting-edge web solutions .</p>
-        <button class="button-orange-webrally">GET ONE</button>
+        <a href="#the-form"><button class="button-orange-webrally">GET ONE</button></a>
     </div>
     <div class="homepage-first-image">
         <img src="{% static 'images/man-on-laptop.png' %}">
@@ -70,7 +70,7 @@
      <a href="{% url 'wordpress' %}">
          <div class="service-box1">
            <div class="boxes-inside-boxes-services">
-                <img src="{% static 'images/services/wordpress.svg' %}">
+                <img src="{% static 'images/services/Wordpress.svg' %}">
                 <p>WordPress development</p>
                 <p>WordPress websites developed to archieve business results</p>
             </div>
@@ -84,10 +84,10 @@
             </div>
         </div>
         </a>
- 
+
         <a href="{% url 'landingpage' %}">
         <div class="service-box3">
-            <div class="boxes-inside-boxes-services"><img src="{% static 'images/services/landing-and-promo.svg' %}">
+            <div class="boxes-inside-boxes-services"><img src="{% static 'images/services/Landing-and-promo.svg' %}">
                 <p>Landing and Promo Sites</p>
                 <p>Here you will get a sales magnet with the latest web technologies</p>
             </div>
@@ -95,7 +95,7 @@
 
         <a href="{% url 'startup' %}">
         <div class="service-box4">
-            <div class="boxes-inside-boxes-services"><img src="{% static 'images/services/website-for-startups.svg' %}">
+            <div class="boxes-inside-boxes-services"><img src="{% static 'images/services/Website-for-startups.svg' %}">
                 <p>Website for Startups</p>
                 <p>Here you can get cost-effective solutions to grow your startup</p>
             </div>
@@ -104,7 +104,7 @@
 
         <a href="{% url 'corporate' %}">
         <div class="service-box5">
-            <div class="boxes-inside-boxes-services"><img src="{% static 'images/services/corporate-website.svg' %}">
+            <div class="boxes-inside-boxes-services"><img src="{% static 'images/services/Corporate-website.svg' %}">
                 <p>Corporate website</p>
                 <p>Find out how to create a hight quality corporate website</p>
             </div>
@@ -120,7 +120,7 @@
         <div class="success-story-text">
             <h1>Become Our Next Success Story?</h1>
             <p>Connect with our team experts to design web apps that offer a rich user experience. Lay down your requirements and join our list of success stories.</p>
-            <button class="button-orange-webrally">Talk to us</button>
+            <a href="#the-form"><button class="button-orange-webrally">Talk to us</button></a>
         </div>
     </div>
 </div>
@@ -146,7 +146,7 @@
         stroke="light"
         colors="primary:#eeaa66,secondary:#320a5c"
         style="width:250px;height:250px">
-        
+
     </lord-icon>
 </div>
 
@@ -161,9 +161,9 @@
         </p>
         </div>
     </div>
-        
-    
-    
+
+
+
     <div  class="uses-box">
         <div class="straigt-box-uses"><img src="{% static 'images/uses/protect-your-business.png' %}"></div>
     <div class="the-div-for-uses-text"><p class="uses-heading">PROTECT YOUR BUSINESS!</p>
@@ -172,8 +172,8 @@
     </p>
     </div>
     </div>
-    
-    
+
+
     <div  class="uses-box">
         <div class="straigt-box-uses"><img src="{% static 'images/uses/why-icon-2.png' %}"></div>
     <div class="the-div-for-uses-text"><p class="uses-heading">
@@ -183,13 +183,13 @@
     </p>
     </div>
     </div>
-    
+
     </div>
 
 
 
     <div class="one-two-column-uses" id="the-second-column">
-        
+
     <div  class="uses-box">
         <div class="straigt-box-uses"><img src="{% static 'images/uses/why-icon-4.png' %}"></div>
     <div class="the-div-for-uses-text"><p class="uses-heading">EXCEED YOUR EXPECTATIONS!</p>
@@ -198,9 +198,9 @@
     </p>
     </div>
     </div>
-    
-    
-    
+
+
+
     <div  class="uses-box">
         <div class="straigt-box-uses"><img src="{% static 'images/uses/why-icon-1.png' %}"></div>
     <div class="the-div-for-uses-text"><p class="uses-heading">IMPROVE YOUR METHODS!
@@ -209,9 +209,9 @@
     </p>
     </div>
     </div>
-    
-    
-    
+
+
+
     <div  class="uses-box">
         <div class="straigt-box-uses"><img src="{% static 'images/uses/respect-you.png' %}"></div>
     <div class="the-div-for-uses-text"><p class="uses-heading">
@@ -220,13 +220,13 @@
     </p>
     </div>
     </div>
-    
-    
-    
+
+
+
     </div>
     </div>
     </div>
-  
+
 
 
   <div class="container-7">
@@ -234,11 +234,12 @@
         <h1>GET IN TOUCH</h1>
     </div>
     <div class="form-for-contact">
-        <form>
-            <input type="text" placeholder="Full Name" required>
-            <input type="tel" placeholder="Number With Country Code" required>
-            <input type="email" placeholder="Email" required>
-            <textarea placeholder="Your Project Description" rows="4" required></textarea>
+        <form id="the-form" method="post" action="{% url 'home' %}">
+            {% csrf_token %}
+            <input type="text" placeholder="Full Name" required  id="name" name="name" >
+            <input type="tel" placeholder="Number With Country Code" required id="tel" name="tel">
+            <input type="email" placeholder="Email" required id="email" name="email" >
+            <textarea placeholder="Your Project Description" rows="4" required  id="message" name="message" ></textarea>
             <button type="submit">Submit</button>
             <p>Start a conversation by filling in the form</p>
         </form>
